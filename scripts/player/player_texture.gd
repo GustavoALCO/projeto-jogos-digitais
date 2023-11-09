@@ -1,11 +1,18 @@
 extends Sprite
 class_name PlayerTexture
 
+onready var spawn_point: Position2D = get_node("%SpawnPoint")
 onready var animation: AnimationPlayer = get_node("%Animation")
+onready var parent: KinematicBody2D = get_parent()
+
+var on_action: bool = false
 
 func animate(velocity: Vector2) -> void:
 	verify_orientation(velocity.x)
 	
+	if on_action:
+		return
+		
 	if velocity.y != 0:
 		vertical_behavior(velocity.y)
 		return
@@ -15,10 +22,16 @@ func animate(velocity: Vector2) -> void:
 func verify_orientation(speed: float) -> void:
 	if speed > 0:
 		flip_h = false
-		return
+		spawn_point.position = Vector2(7,6)
+		
 	if speed < 0:
 		flip_h = true
-		
+		spawn_point.position = Vector2(-11,6)
+
+func action_behavior(action: String) -> void:
+	on_action = true
+	animation.play(action)
+			
 func vertical_behavior(speed: float) -> void:
 	if speed > 0:
 		animation.play("fall")
@@ -31,3 +44,11 @@ func horizontal_behaivor(speed: float) -> void:
 		animation.play("run")
 		return
 	animation.play("idle")
+
+
+func on_animation_finished(anim_name: String):
+	if anim_name == "attack":
+		on_action = false
+		parent.can_attack = true
+		parent.set_physics_process(true)
+		
