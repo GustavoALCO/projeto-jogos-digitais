@@ -9,7 +9,7 @@ var can_attack: bool = true
 
 export(int) var move_speed
 export(int)var jump_speed
-
+export(int)var health
 export(int) var gravity_speed
 
 func _physics_process(delta: float) -> void:
@@ -41,3 +41,10 @@ func spawn_projectile() -> void:
 	get_tree().root.call_deferred("add_child", projectile)
 	projectile.direction = sign(spawn_point.position.x)
 	projectile.global_position = spawn_point.global_position
+	
+func update_health(value : int) -> void:
+	health -= value
+	print(health)
+	
+	if health <= 0:
+		var _reload: bool = get_tree().change_scene("res://scenes/management/dead_screen.tscn")
