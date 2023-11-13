@@ -167,6 +167,7 @@ tracks/3/keys = {
 
 [node name="arrow" type="Area2D"]
 script = ExtResource( 4 )
+damage = 15
 
 [node name="Texture" type="Sprite" parent="."]
 texture = ExtResource( 1 )

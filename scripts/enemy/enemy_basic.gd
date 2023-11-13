@@ -6,6 +6,7 @@ onready var atack_timer: Timer	= get_node("attackCooldown")
 var player_ref: KinematicBody2D = null
 var velocity: Vector2
 var can_deal_damage: bool = true
+export(int)var healph
 export(int)var enemy_damage
 export(int)var move_speed
 export(int)var distance_threshold
@@ -32,14 +33,19 @@ func move() -> void:
 	
 	
 func _on_body_entered(body):
-	if body is player:
+	if body.is_in_group("player"):
 		player_ref = body
 
 
 func _on_body_exited(body):
-	if body is player:
+	if body.is_in_group("player"):
 			player_ref = null
 
 
 func _on_attackCooldown_timeout():
 	can_deal_damage = true
+
+func update_healph(value: int):
+	healph -= value
+	if healph <= 0:
+		queue_free()

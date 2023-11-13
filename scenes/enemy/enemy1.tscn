@@ -111,10 +111,11 @@ tracks/3/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 67.5, 10 )
+extents = Vector2( 109.5, 10 )
 
 [node name="enemy" type="KinematicBody2D"]
 script = ExtResource( 2 )
+healph = 30
 enemy_damage = 5
 move_speed = 90
 distance_threshold = 19
@@ -138,7 +139,7 @@ anims/idle = SubResource( 3 )
 [node name="detectionArea" type="Area2D" parent="."]
 
 [node name="Colision" type="CollisionShape2D" parent="detectionArea"]
-position = Vector2( -42.5, 0 )
+position = Vector2( -0.5, 0 )
 shape = SubResource( 4 )
 
 [node name="attackCooldown" type="Timer" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://assets/Tiles/Tile-08.png" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/Tile-10.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://assets/Tiles/Tile-03.png" type="Texture" id=13]
 [ext_resource path="res://assets/Tiles/Tile-04.png" type="Texture" id=14]
 [ext_resource path="res://assets/Tiles/Tile-30.png" type="Texture" id=15]
+[ext_resource path="res://scenes/enemy/enemy1.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/management/background.tscn" type="PackedScene" id=21]
 [ext_resource path="res://assets/Misc/Bush-Green-Foreground.png" type="Texture" id=22]
 [ext_resource path="res://assets/Misc/Bridge-handle-01.png" type="Texture" id=23]
@@ -457,7 +458,10 @@ format = 1
 tile_data = PoolIntArray( 720965, 536870921, 0, 983052, 5, 0, 983054, 5, 0, 1179735, 536870920, 0, 1245229, 9, 0, 1376256, 7, 0, 1376314, 9, 0, 1376337, 536870919, 0, 1376349, 536870919, 0, 1900552, 5, 0, 1900556, 5, 0, 1900564, 5, 0, 1900567, 4, 0, 1900577, 536870916, 0, 1900596, 4, 0, 1966103, 4, 0, 1966113, 536870916, 0, 1966136, 536870916, 0, 2031616, 1, 0, 2031619, 1, 0, 2031622, 0, 0, 2031635, 1, 0, 2031673, 1, 0, 2031695, 536870912, 0 )
 
 [node name="player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 27, 155 )
+position = Vector2( 7, 157 )
 jump_speed = 170
 
 [node name="background" parent="." instance=ExtResource( 21 )]
+
+[node name="enemy" parent="." instance=ExtResource( 16 )]
+position = Vector2( 181, 155 )

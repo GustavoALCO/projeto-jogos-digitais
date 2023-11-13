@@ -6,6 +6,7 @@ onready var animation: AnimationPlayer = get_node("Animation")
 
 var direction : int = 1
 export (int) var speed = 150
+export (int) var damage
 
 func _ready() -> void:
 	if direction == -1:
@@ -21,6 +22,9 @@ func _on_body_entered(body):
 		set_physics_process(false)
 		yield(get_tree().create_timer(2), "timeout") 
 		queue_free() 
+	if body is enemy:
+		body.update_healph(damage)
+		queue_free()
 
 
 func on_screen_exited() -> void:

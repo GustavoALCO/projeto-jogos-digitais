@@ -44,6 +44,8 @@ func spawn_projectile() -> void:
 	
 func update_health(value : int) -> void:
 	health -= value
+	sprite.action_behavior("hit")
+	
 	print(health)
 	
 	if health <= 0:
