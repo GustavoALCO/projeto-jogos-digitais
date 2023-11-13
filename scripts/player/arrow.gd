@@ -23,7 +23,7 @@ func _on_body_entered(body):
 		yield(get_tree().create_timer(2), "timeout") 
 		queue_free() 
 	if body is enemy:
-		body.update_healph(damage)
+		body.update_health(damage)
 		queue_free()
 
 

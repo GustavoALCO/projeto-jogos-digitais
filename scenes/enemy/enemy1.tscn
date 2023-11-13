@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Enemies/Enemy-Forest-Goblin-Hog-Idle-32x32.png" type="Texture" id=1]
 [ext_resource path="res://scripts/enemy/enemy_basic.gd" type="Script" id=2]
@@ -55,6 +55,47 @@ tracks/3/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Texture:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "hit"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texture:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 0.705882 ), Color( 1, 0, 0, 0.705882 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0.0 ],
+"method": "_physics_process"
+} ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -115,7 +156,7 @@ extents = Vector2( 109.5, 10 )
 
 [node name="enemy" type="KinematicBody2D"]
 script = ExtResource( 2 )
-healph = 30
+health = 30
 enemy_damage = 5
 move_speed = 90
 distance_threshold = 19
@@ -134,6 +175,7 @@ shape = SubResource( 1 )
 [node name="Animation" type="AnimationPlayer" parent="."]
 autoplay = "idle"
 anims/RESET = SubResource( 2 )
+anims/hit = SubResource( 5 )
 anims/idle = SubResource( 3 )
 
 [node name="detectionArea" type="Area2D" parent="."]
@@ -145,6 +187,7 @@ shape = SubResource( 4 )
 [node name="attackCooldown" type="Timer" parent="."]
 one_shot = true
 
+[connection signal="animation_finished" from="Animation" to="." method="_on_Animation_animation_finished"]
 [connection signal="body_entered" from="detectionArea" to="." method="_on_body_entered"]
 [connection signal="body_exited" from="detectionArea" to="." method="_on_body_exited"]
 [connection signal="timeout" from="attackCooldown" to="." method="_on_attackCooldown_timeout"]

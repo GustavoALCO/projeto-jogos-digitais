@@ -54,4 +54,7 @@ func on_animation_finished(anim_name: String):
 		
 	if anim_name == "hit":
 		on_action = false
+		parent.can_attack = true
 		parent.set_physics_process(true)
+
+
