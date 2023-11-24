@@ -254,6 +254,7 @@ text = "SAIR"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
+volume_db = -25.0
 autoplay = true
 
 [connection signal="pressed" from="controls/startBtn" to="." method="_on_startBtn_pressed"]

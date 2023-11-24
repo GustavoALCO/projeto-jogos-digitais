@@ -503,15 +503,12 @@ collision_layer = 2
 
 [node name="golem" parent="ENEMYS" instance=ExtResource( 18 )]
 position = Vector2( 2247, 121 )
-gravity_speed = 2000
 
 [node name="golem2" parent="ENEMYS" instance=ExtResource( 18 )]
 position = Vector2( 2832, 96 )
-gravity_speed = 2000
 
 [node name="golem3" parent="ENEMYS" instance=ExtResource( 18 )]
 position = Vector2( 3366, 123 )
-gravity_speed = 2000
 
 [node name="final" type="Area2D" parent="."]
 
@@ -521,6 +518,7 @@ shape = SubResource( 32 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 30 )
+volume_db = -25.0
 autoplay = true
 
 [connection signal="body_shape_entered" from="cair" to="." method="_on_cair_body_shape_entered"]
