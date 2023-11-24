@@ -1,22 +1,21 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://assets/tileMenu/Corporation Games.otf" type="DynamicFontData" id=1]
-[ext_resource path="res://scripts/scenes/startScreen.gd" type="Script" id=2]
-[ext_resource path="res://scenes/management/background.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/management/background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/tileMenu/Corporation Games.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Control.gd" type="Script" id=3]
 [ext_resource path="res://assets/Misc/House-02.png" type="Texture" id=4]
-[ext_resource path="res://assets/Objects/Obj-Axe-Wood.png" type="Texture" id=5]
-[ext_resource path="res://assets/Misc/Bush-Green-Foreground.png" type="Texture" id=6]
-[ext_resource path="res://assets/Tiles/Tile-10.png" type="Texture" id=7]
-[ext_resource path="res://assets/Tiles/Tile-09.png" type="Texture" id=8]
-[ext_resource path="res://assets/Tiles/Tile-08.png" type="Texture" id=9]
-[ext_resource path="res://assets/Player/Player-Jump-24x24.png" type="Texture" id=10]
-[ext_resource path="res://assets/Misc/Grass-Green-Foreground.png" type="Texture" id=11]
-[ext_resource path="res://assets/Objects/Obj-Wood-Platform-Tall-02.png" type="Texture" id=12]
-[ext_resource path="res://assets/Music/Music.mp3" type="AudioStream" id=13]
+[ext_resource path="res://assets/Tiles/Tile-09.png" type="Texture" id=5]
+[ext_resource path="res://assets/Tiles/Tile-10.png" type="Texture" id=6]
+[ext_resource path="res://assets/Misc/Grass-Green-Foreground.png" type="Texture" id=7]
+[ext_resource path="res://assets/Objects/Obj-Wood-Platform-Tall-02.png" type="Texture" id=8]
+[ext_resource path="res://assets/Objects/Obj-Axe-Wood.png" type="Texture" id=9]
+[ext_resource path="res://assets/Tiles/Tile-08.png" type="Texture" id=10]
+[ext_resource path="res://assets/Misc/Bush-Green-Foreground.png" type="Texture" id=11]
+[ext_resource path="res://assets/Player/Player-Jump-24x24.png" type="Texture" id=12]
 
-[sub_resource type="TileSet" id=7]
+[sub_resource type="TileSet" id=12]
 0/name = "Tile-10.png 0"
-0/texture = ExtResource( 7 )
+0/texture = ExtResource( 6 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 24, 24 )
@@ -30,7 +29,7 @@
 0/shapes = [  ]
 0/z_index = 0
 1/name = "Tile-09.png 1"
-1/texture = ExtResource( 8 )
+1/texture = ExtResource( 5 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 24, 24 )
@@ -44,7 +43,7 @@
 1/shapes = [  ]
 1/z_index = 0
 2/name = "Tile-09.png 2"
-2/texture = ExtResource( 8 )
+2/texture = ExtResource( 5 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 24, 24 )
@@ -58,7 +57,7 @@
 2/shapes = [  ]
 2/z_index = 0
 3/name = "Tile-08.png 3"
-3/texture = ExtResource( 9 )
+3/texture = ExtResource( 10 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 24, 24 )
@@ -72,7 +71,7 @@
 3/shapes = [  ]
 3/z_index = 0
 4/name = "Obj-Wood-Platform-Tall-02.png 4"
-4/texture = ExtResource( 12 )
+4/texture = ExtResource( 8 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 48, 48 )
@@ -100,7 +99,7 @@
 5/shapes = [  ]
 5/z_index = 0
 6/name = "Grass-Green-Foreground.png 6"
-6/texture = ExtResource( 11 )
+6/texture = ExtResource( 7 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 24, 24 )
@@ -114,7 +113,7 @@
 6/shapes = [  ]
 6/z_index = 0
 7/name = "Player-Jump-24x24.png 7"
-7/texture = ExtResource( 10 )
+7/texture = ExtResource( 12 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 24, 24, 24 )
@@ -128,7 +127,7 @@
 7/shapes = [  ]
 7/z_index = 0
 8/name = "Obj-Axe-Wood.png 8"
-8/texture = ExtResource( 5 )
+8/texture = ExtResource( 9 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 0, 24, 24 )
@@ -142,7 +141,7 @@
 8/shapes = [  ]
 8/z_index = 0
 9/name = "Bush-Green-Foreground.png 9"
-9/texture = ExtResource( 6 )
+9/texture = ExtResource( 11 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 48, 24 )
@@ -156,12 +155,12 @@
 9/shapes = [  ]
 9/z_index = 0
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=13]
 size = 20
 outline_color = Color( 1, 1, 1, 0 )
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxFlat" id=13]
+[sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 border_width_left = 2
 border_width_top = 2
@@ -170,92 +169,80 @@ border_width_bottom = 2
 border_color = Color( 0.588235, 0, 0.803922, 1 )
 border_blend = true
 
-[sub_resource type="StyleBoxEmpty" id=14]
+[sub_resource type="StyleBoxEmpty" id=9]
 
-[sub_resource type="StyleBoxEmpty" id=15]
+[sub_resource type="StyleBoxEmpty" id=10]
 
-[sub_resource type="StyleBoxEmpty" id=16]
+[sub_resource type="StyleBoxEmpty" id=11]
 
-[sub_resource type="Theme" id=5]
-Button/styles/focus = SubResource( 13 )
-Button/styles/hover = SubResource( 14 )
-Button/styles/normal = SubResource( 15 )
-Button/styles/pressed = SubResource( 16 )
+[sub_resource type="Theme" id=14]
+Button/styles/focus = SubResource( 8 )
+Button/styles/hover = SubResource( 9 )
+Button/styles/normal = SubResource( 10 )
+Button/styles/pressed = SubResource( 11 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=15]
 size = 20
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
-[node name="startScreen" type="Control"]
+[node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 2 )
+rect_pivot_offset = Vector2( -160, -48 )
+script = ExtResource( 3 )
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 7 )
+tile_set = SubResource( 12 )
 cell_size = Vector2( 24, 5 )
 format = 1
-tile_data = PoolIntArray( 1376266, 536870917, 0, 1572864, 4, 0, 1572866, 536870916, 0, 1835012, 9, 0, 1835015, 9, 0, 1900556, 536870919, 0, 1900558, 8, 0, 2162688, 3, 0, 2162689, 0, 0, 2162690, 0, 0, 2162691, 0, 0, 2162692, 0, 0, 2162693, 0, 0, 2162694, 0, 0, 2162695, 0, 0, 2162696, 0, 0, 2162697, 0, 0, 2162698, 0, 0, 2162699, 0, 0, 2162700, 0, 0, 2162701, 0, 0, 2162702, 1, 0 )
+tile_data = PoolIntArray( 1376266, 536870917, 0, 1572864, 4, 0, 1572866, 536870916, 0, 1835012, 6, 0, 1835014, 9, 0, 1900556, 536870919, 0, 1900558, 8, 0, 2162688, 3, 0, 2162689, 0, 0, 2162690, 0, 0, 2162691, 0, 0, 2162692, 0, 0, 2162693, 0, 0, 2162694, 0, 0, 2162695, 0, 0, 2162696, 0, 0, 2162697, 0, 0, 2162698, 0, 0, 2162699, 0, 0, 2162700, 0, 0, 2162701, 0, 0, 2162702, 1, 0 )
 
-[node name="Background" parent="TileMap" instance=ExtResource( 3 )]
+[node name="Background" parent="TileMap" instance=ExtResource( 1 )]
 
 [node name="controls" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -143.0
-margin_top = -62.5
-margin_right = 143.0
-margin_bottom = 62.5
+margin_left = -165.0
+margin_top = -87.0
+margin_right = 165.0
+margin_bottom = 87.0
 
 [node name="Label" type="Label" parent="controls"]
-margin_right = 286.0
-margin_bottom = 47.0
+margin_right = 330.0
+margin_bottom = 97.0
 custom_colors/font_color = Color( 0, 0.52549, 0.666667, 1 )
-custom_fonts/font = SubResource( 12 )
-text = "Arqueiro da Escuridao
+custom_fonts/font = SubResource( 13 )
+text = "PARABENS VOCE COMPLETOU 
+				A DEMO DE 
+				Arqueiro da Escuridao
     A Lenda dos Goblins"
+align = 1
 
 [node name="startBtn" type="Button" parent="controls"]
-margin_top = 51.0
-margin_right = 286.0
-margin_bottom = 73.0
+margin_top = 101.0
+margin_right = 330.0
+margin_bottom = 123.0
 focus_neighbour_top = NodePath("../exitBtn")
-theme = SubResource( 5 )
+theme = SubResource( 14 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.67451, 0.768627, 0, 1 )
 custom_colors/font_color_pressed = Color( 0.85098, 0.972549, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "INICIAR"
-
-[node name="confgBtn" type="Button" parent="controls"]
-margin_top = 77.0
-margin_right = 286.0
-margin_bottom = 99.0
-theme = SubResource( 5 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 0.67451, 0.768627, 0, 1 )
-custom_colors/font_color_pressed = Color( 0.85098, 0.972549, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "CONTROLES"
+custom_fonts/font = SubResource( 15 )
+text = "RENICIAR"
 
 [node name="exitBtn" type="Button" parent="controls"]
-margin_top = 103.0
-margin_right = 286.0
-margin_bottom = 125.0
+margin_top = 127.0
+margin_right = 330.0
+margin_bottom = 149.0
 focus_neighbour_bottom = NodePath("../startBtn")
-theme = SubResource( 5 )
+theme = SubResource( 14 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.67451, 0.768627, 0, 1 )
 custom_colors/font_color_pressed = Color( 0.85098, 0.972549, 0, 1 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 15 )
 text = "SAIR"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 13 )
-autoplay = true
-
 [connection signal="pressed" from="controls/startBtn" to="." method="_on_startBtn_pressed"]
-[connection signal="pressed" from="controls/confgBtn" to="." method="_on_confgBtn_pressed"]
 [connection signal="pressed" from="controls/exitBtn" to="." method="_on_exitBtn_pressed"]

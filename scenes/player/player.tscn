@@ -409,9 +409,6 @@ extents = Vector2( 6.5, 4 )
 [node name="player" type="KinematicBody2D" groups=["player"]]
 position = Vector2( 16, 12 )
 script = ExtResource( 2 )
-move_speed = 90
-jump_speed = 50
-health = 15
 gravity_speed = 300
 
 [node name="Texture" type="Sprite" parent="."]
@@ -439,7 +436,7 @@ position = Vector2( -0.5, 6 )
 shape = SubResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 180, -106 )
+position = Vector2( 55, 4 )
 current = true
 limit_top = 0
 limit_bottom = 60

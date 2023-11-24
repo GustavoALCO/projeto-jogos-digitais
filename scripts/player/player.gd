@@ -7,9 +7,7 @@ onready var spawn_point: Position2D = get_node("SpawnPoint")
 var velocity: Vector2
 var can_attack: bool = true
 
-export(int) var move_speed
-export(int)var jump_speed
-export(int)var health
+
 export(int) var gravity_speed
 
 func _physics_process(delta: float) -> void:
@@ -20,7 +18,7 @@ func _physics_process(delta: float) -> void:
 	sprite.animate(velocity)
 	
 func move() -> void:
-	velocity.x = move_speed * get_direction ()
+	velocity.x = Global.move_speed * get_direction ()
 	
 func get_direction() -> float :
 	return Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")	
@@ -34,7 +32,7 @@ func jump(delta: float) -> void:
 	velocity.y += delta * gravity_speed
 	
 	if Input.is_action_just_pressed("ui_select") and is_on_floor():
-		velocity.y = -jump_speed
+		velocity.y = -Global.jump_speed
 
 func spawn_projectile() -> void:
 	var projectile: Arrow = PROJECTILE.instance()
@@ -43,10 +41,10 @@ func spawn_projectile() -> void:
 	projectile.global_position = spawn_point.global_position
 	
 func update_health(value : int) -> void:
-	health -= value
+	Global.health -= value
 	sprite.action_behavior("hit")
 	
-	print(health)
+	print(Global.health)
 	
-	if health <= 0:
+	if Global.health <= 0:
 		var _reload: bool = get_tree().change_scene("res://scenes/management/dead_screen.tscn")
