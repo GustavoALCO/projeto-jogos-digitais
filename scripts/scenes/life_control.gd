@@ -6,4 +6,3 @@ func _process(delta):
 	$tempo.text = str(Global.tempo)	
 func _on_Timer_timeout():
 	Global.tempo += 1
-	

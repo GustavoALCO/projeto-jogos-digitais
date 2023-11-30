@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://assets/tileMenu/Corporation Games.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/Tiles/Tile-29.png" type="Texture" id=2]
@@ -304,6 +304,11 @@
 19/shapes = [  ]
 19/z_index = 0
 
+[sub_resource type="DynamicFont" id=15]
+size = 20
+outline_color = Color( 1, 1, 1, 0 )
+font_data = ExtResource( 1 )
+
 [sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 border_width_left = 2
@@ -357,16 +362,23 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -38.5
-margin_top = -26.5
-margin_right = 38.5
-margin_bottom = 26.5
+margin_left = -77.5
+margin_top = -29.0
+margin_right = 77.5
+margin_bottom = 29.0
 alignment = 1
 
+[node name="Label" type="Label" parent="controls"]
+margin_right = 155.0
+margin_bottom = 22.0
+custom_colors/font_color = Color( 0, 0.52549, 0.666667, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Voce perdeu"
+
 [node name="restartBtn" type="Button" parent="controls"]
-margin_top = 10.0
-margin_right = 77.0
-margin_bottom = 24.0
+margin_top = 26.0
+margin_right = 155.0
+margin_bottom = 40.0
 focus_neighbour_top = NodePath("../exitBtn")
 focus_neighbour_bottom = NodePath("../exitBtn")
 focus_mode = 1
@@ -379,9 +391,9 @@ enabled_focus_mode = 1
 text = "RENICIAR"
 
 [node name="exitBtn" type="Button" parent="controls"]
-margin_top = 28.0
-margin_right = 77.0
-margin_bottom = 42.0
+margin_top = 44.0
+margin_right = 155.0
+margin_bottom = 58.0
 focus_neighbour_top = NodePath("../restartBtn")
 focus_neighbour_bottom = NodePath("../restartBtn")
 focus_mode = 1
