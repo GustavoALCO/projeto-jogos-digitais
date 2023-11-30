@@ -162,6 +162,7 @@ move_speed = 90
 distance_threshold = 19
 attack_cooldown = 1.5
 gravity_speed = 2000
+pontos = 5
 
 [node name="Texture" type="Sprite" parent="."]
 texture = ExtResource( 1 )

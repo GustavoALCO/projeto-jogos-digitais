@@ -3,8 +3,7 @@ extends Node2D
 
 func _ready():
 	
-	Global.resetar_variaveis()
-
+	Global.resetar_variaveis()	
 
 func _on_cair_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body is player:

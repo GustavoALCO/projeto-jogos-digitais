@@ -176,6 +176,7 @@ move_speed = 50
 distance_threshold = 23
 attack_cooldown = 2.0
 gravity_speed = 2000
+pontos = 20
 
 [node name="Texture" type="Sprite" parent="."]
 modulate = Color( 1, 0, 0, 1 )

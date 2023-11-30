@@ -14,6 +14,7 @@ export(int) var move_speed
 export(int) var distance_threshold
 export(float) var attack_cooldown
 export(int) var gravity_speed
+export(int) var pontos
 
 func _physics_process(delta: float) -> void:
 	if player_ref == null:
@@ -56,6 +57,7 @@ func update_health(value: int):
 	animation.play("hit")
 	
 	if health <= 0:
+		Global.pontos += pontos 
 		queue_free()
 
 func verify_orientation() -> void:

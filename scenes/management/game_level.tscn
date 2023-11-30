@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://assets/Tiles/Tile-08.png" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/Tile-10.png" type="Texture" id=2]
@@ -32,6 +32,7 @@
 [ext_resource path="res://assets/Music/Music.mp3" type="AudioStream" id=30]
 [ext_resource path="res://scenes/management/coin.tscn" type="PackedScene" id=31]
 [ext_resource path="res://scenes/management/smallcoin.tscn" type="PackedScene" id=32]
+[ext_resource path="res://scenes/management/heart.tscn" type="PackedScene" id=33]
 
 [sub_resource type="TileSet" id=27]
 0/name = "Cave-Background-Rocks-01.png 0"
@@ -523,95 +524,106 @@ stream = ExtResource( 30 )
 volume_db = -25.0
 autoplay = true
 
-[node name="pontos" type="Node2D" parent="."]
+[node name="consumiveis" type="Node2D" parent="."]
 
-[node name="coin" type="Node2D" parent="pontos"]
+[node name="coin" type="Node2D" parent="consumiveis"]
 
-[node name="Coin" parent="pontos/coin" instance=ExtResource( 31 )]
+[node name="Coin" parent="consumiveis/coin" instance=ExtResource( 31 )]
 position = Vector2( 216, 83 )
 
-[node name="coin" parent="pontos/coin" instance=ExtResource( 31 )]
+[node name="coin" parent="consumiveis/coin" instance=ExtResource( 31 )]
 position = Vector2( 1644, 120 )
 
-[node name="coin2" parent="pontos/coin" instance=ExtResource( 31 )]
+[node name="coin2" parent="consumiveis/coin" instance=ExtResource( 31 )]
 position = Vector2( 2224, 131 )
 
-[node name="coin3" parent="pontos/coin" instance=ExtResource( 31 )]
+[node name="coin3" parent="consumiveis/coin" instance=ExtResource( 31 )]
 position = Vector2( 2787, 104 )
 
-[node name="coin4" parent="pontos/coin" instance=ExtResource( 31 )]
+[node name="coin4" parent="consumiveis/coin" instance=ExtResource( 31 )]
 position = Vector2( 3367, 132 )
 
-[node name="Smallcoin" type="Node2D" parent="pontos"]
+[node name="Smallcoin" type="Node2D" parent="consumiveis"]
 
-[node name="smallcoin" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="smallcoin" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 183, 157 )
 
-[node name="smallcoin2" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="smallcoin2" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 238, 156 )
 
-[node name="smallcoin3" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="smallcoin3" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 392, 154 )
 
-[node name="smallcoin4" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="smallcoin4" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 475, 154 )
 
-[node name="smallcoin5" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="smallcoin5" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 611, 154 )
 
-[node name="smallcoin6" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="smallcoin6" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 705, 154 )
 
-[node name="Area2D" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="Area2D" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 774, 155 )
 
-[node name="Area2D2" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="Area2D2" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 870, 154 )
 
-[node name="Area2D3" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="Area2D3" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 945, 156 )
 
-[node name="Area2D4" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="Area2D4" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 1018, 103 )
 
-[node name="Area2D5" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="Area2D5" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 1137, 106 )
 
-[node name="Area2D6" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="Area2D6" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 1170, 156 )
 
-[node name="Area2D7" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="Area2D7" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 1291, 159 )
 
-[node name="Area2D8" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="Area2D8" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 1416, 156 )
 
-[node name="Area2D9" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="Area2D9" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 1539, 156 )
 
-[node name="Area2D10" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="Area2D10" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 1808, 156 )
 
-[node name="Area2D11" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="Area2D11" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 1957, 108 )
 
-[node name="Area2D12" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="Area2D12" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 2157, 133 )
 
-[node name="Area2D13" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="Area2D13" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 2287, 131 )
 
-[node name="Area2D14" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="Area2D14" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 2519, 154 )
 
-[node name="Area2D15" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="Area2D15" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 2618, 130 )
 
-[node name="Area2D16" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="Area2D16" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 2929, 131 )
 
-[node name="Area2D17" parent="pontos/Smallcoin" instance=ExtResource( 32 )]
+[node name="Area2D17" parent="consumiveis/Smallcoin" instance=ExtResource( 32 )]
 position = Vector2( 3057, 157 )
+
+[node name="Vida" type="Node2D" parent="consumiveis"]
+
+[node name="Heart" parent="consumiveis/Vida" instance=ExtResource( 33 )]
+position = Vector2( 575, 160 )
+
+[node name="Heart2" parent="consumiveis/Vida" instance=ExtResource( 33 )]
+position = Vector2( 1084, 112 )
+
+[node name="Heart3" parent="consumiveis/Vida" instance=ExtResource( 33 )]
+position = Vector2( 2037, 88 )
 
 [connection signal="body_shape_entered" from="cair" to="." method="_on_cair_body_shape_entered"]
 [connection signal="body_shape_entered" from="final" to="." method="_on_final_body_shape_entered"]
